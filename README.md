@@ -67,7 +67,7 @@ tags = {
     Created_by        = "Gulmira"
     
   }
-
+```
 ### Create a "variables.tf" file with following content:
 ```
 variable "region" {}
@@ -86,14 +86,12 @@ variable "tags" {
 }
 
 ```
- 
 ### Use following command to run this module:
     * terraform apply -var-file region/virginia.tfvars
     * terraform apply -var-file region/ohio.tfvars
    
 
 ### Get the output
-
 ```
 output "vpc_id" {
   value = "${module.VPC.vpc_id}"
@@ -124,4 +122,3 @@ output "tags" {
   value = "${module.VPC.tags}"
 }
 
-```
